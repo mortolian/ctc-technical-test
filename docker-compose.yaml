@@ -4,7 +4,7 @@ services:
   php:
     build:
       context: '.'
-      dockerfile: '.docker/php/Dockerfile-php'
+      dockerfile: '.docker/php/Dockerfile'
       args:
         uid: 1000
     restart: always
