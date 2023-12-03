@@ -1,12 +1,11 @@
 # Composer Build Stage
 FROM composer:latest as composer
 WORKDIR /app
-COPY composer.json composer.lock ./
+COPY ../../composer.json composer.lock ./
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && \
     composer clear-cache
-COPY . .
+COPY ../.. .
 RUN composer dump-autoload --no-scripts --no-dev --optimize
-RUN ls
 
 # APP Build Stage
 FROM php:8.2-apache
@@ -50,7 +49,7 @@ RUN docker-php-ext-install \
     zip
 
 # 5 - Copy the application code from the composer stage.
-COPY --from=composer /app /var/www/html
+COPY --from=composer / /var/www/html
 
 # 6 - Create a non-root user to run the application.
 ARG uid

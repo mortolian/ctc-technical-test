@@ -8,13 +8,27 @@ build a User Registration, Login, and Voting poll component with specific functi
 This is a technical test of CTC.
 
 ## Run Project
-To run the project you will require docker desktop. This will setup all
+To run the project you will require docker desktop. This will set up all
 the parts the application needs to run including MySQL.
 
-Clone the the project and then from the root of the project run:
+The SQL database will have a base file which will populate the server for development.
+`.docker/mysql/docker-entrypoint-initdb.d/test.sql`
+
+Clone the project and then from the root of the project run:
 
 ```shell
 docker-composer up -d --build
+```
+
+The site will be available on http://localhost.
+
+### PHPMyAdmin
+There is access to PHPMyAdmin @ http://localhost:8080/:
+
+```text
+Server: mysql
+Username: root
+Password: mysql
 ```
 
 ### Functionality Required:
@@ -62,6 +76,7 @@ Technical Requirements:
 
 ### Time Limit
 - You have a maximum of 2 hours to complete this technical test.
+- NOTE: I exceeded this 2 hour limit.
 
 ### Submission
 - Please organize all your PHP code and SQL queries, including table creation scripts, into a single folder. Zip the
