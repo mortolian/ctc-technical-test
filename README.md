@@ -8,6 +8,8 @@ build a User Registration, Login, and Voting poll component with specific functi
 - Venue: Remote
 ---
 ## Project 
+# ctc-technical-test
+This is a technical test of CTC.
 
 ### Functionality Required:
 - User Registration Page: You must design a User Registration page with the following fields:
