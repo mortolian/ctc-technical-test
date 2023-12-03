@@ -11,6 +11,16 @@ build a User Registration, Login, and Voting poll component with specific functi
 # ctc-technical-test
 This is a technical test of CTC.
 
+## Run Project
+To run the project you will require docker desktop. This will setup all
+the parts the application needs to run including MySQL.
+
+Clone the the project and then from the root of the project run:
+
+```shell
+docker-composer up -d --build
+```
+
 ### Functionality Required:
 - User Registration Page: You must design a User Registration page with the following fields:
   -[ ] User first name (required)
