@@ -10,6 +10,7 @@ class Response
         private array $headers = []
     )
     {
+        http_response_code($this->status);
     }
 
     public function send(): void

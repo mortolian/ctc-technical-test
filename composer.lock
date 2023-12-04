@@ -4,8 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "970043a81ad5b1f2292e3440468ecd32",
+    "content-hash": "bf13aabaa76e34878861bb4080933db2",
     "packages": [
+        {
+            "name": "mortolio/framework",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "framework",
+                "reference": "0c8036f08733605847d9a56430a4f53d50796e8d"
+            },
+            "require": {
+                "nikic/fast-route": "^1.3"
+            },
+            "require-dev": {
+                "symfony/var-dumper": "^7.0"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Gideon\\Framework\\": "src/"
+                }
+            },
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Gideon",
+                    "email": "git@mortolian.com"
+                }
+            ],
+            "description": "A very simple framework.",
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "nikic/fast-route",
             "version": "v1.3.0",
@@ -227,7 +261,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mortolio/framework": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
