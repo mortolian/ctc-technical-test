@@ -3,6 +3,11 @@ In this assessment, you will showcase your skills as a developer by creating a r
 build a User Registration, Login, and Voting poll component with specific functionalities outlined below.
 
 ---
+#### Framework
+The 'Framework' in this project is part of a bit of learning I am doing and not 
+any of the major frameworks. I basically created it from scratch as
+part of a course. This way this project is a learning opportunity.
+---
 
 # Project
 This is a technical test of CTC.
@@ -89,3 +94,4 @@ evaluating your coding style and approach.
 
 # References
 - https://snyk.io/blog/dockerize-php-application/
+- https://jquery.com/download/

@@ -3,9 +3,14 @@
 use Gideon\Framework\http\Kernel;
 use Gideon\Framework\http\Request;
 
+define('BASE_PATH', dirname(__DIR__));
+
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $request = Request::createFromGlobals();
-$kernel = new Kernel();
+
+$router = new \Gideon\Framework\routing\Router();
+
+$kernel = new Kernel($router);
 $response = $kernel->handle($request);
 $response->send();

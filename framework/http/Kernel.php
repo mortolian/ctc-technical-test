@@ -2,33 +2,27 @@
 
 namespace Gideon\Framework\http;
 
-use FastRoute\RouteCollector;
-use function FastRoute\simpleDispatcher;
+use Exception;
+use Gideon\Framework\routing\Router;
 
-class Kernel
+readonly class Kernel
 {
+    public function __construct(
+        private Router $router
+    )
+    {
+    }
+
     public function handle(Request $request): Response
     {
-        $dispatcher = simpleDispatcher(function(RouteCollector $routeCollector) {
-            $routeCollector->addRoute('GET', '/', function() {
-                $content = '<h1>Hello World</h1>';
-                return new Response($content);
-            });
+        try {
+            [$routeHandler, $vars] = $this->router->dispatch($request);
 
-            $routeCollector->addRoute('GET', '/posts/{id:\d+}', function($routeParams) {
-                $content = "<h1>This is Post {$routeParams['id']}</h1>";
-                return new Response($content);
-            });
-        });
+            $response = call_user_func_array($routeHandler, $vars);
+        } catch(Exception $exception) {
+            $response = new Response($exception->getMessage(), 400);
+        }
 
-        $routeInfo = $dispatcher->dispatch(
-            $request->server['REQUEST_METHOD'],
-            $re
-            $request->server['REQUEST_URI']
-        );
-
-        [$status, $handler, $vars] = $routeInfo;
-
-        return $handler($vars);
+        return $response;
     }
 }
