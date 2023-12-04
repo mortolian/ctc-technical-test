@@ -11,6 +11,7 @@ build a User Registration, Login, and Voting poll component with specific functi
 The 'Framework' in this project is part of a bit of learning I am doing and not
 from any of the major frameworks. I created it from scratch as
 part of a course and this way this project is a learning opportunity.
+
 ---
 
 # Project
