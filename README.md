@@ -33,23 +33,23 @@ Password: mysql
 
 ### Functionality Required:
 - User Registration Page: You must design a User Registration page with the following fields:
-  -[ ] User first name (required)
-  -[ ] User last name
-  -[ ] Login Username (required)
-  -[ ] Login Password (required)
-  -[ ] Prevent a user from registering more than once.
-  -[ ] Encrypt the user's password.
-  -[ ] Implement a form of spam protection, such as CAPTCHA.
-  -[ ] Passwords must meet the following criteria:
-    -[ ] At least 8 characters long
-    -[ ] At least 1 uppercase letter
-    -[ ] At least 1 special character
+  - [ ] User first name (required)
+  - [ ] User last name
+  - [ ] Login Username (required)
+  - [ ] Login Password (required)
+  - [ ] Prevent a user from registering more than once.
+  - [ ] Encrypt the user's password.
+  - [ ] Implement a form of spam protection, such as CAPTCHA.
+  - [ ] Passwords must meet the following criteria:
+    - [ ] At least 8 characters long
+    - [ ] At least 1 uppercase letter
+    - [ ] At least 1 special character
 
 ### Login Page:
--[ ] Create a Login page for users to log in with their credentials.
+- [ ] Create a Login page for users to log in with their credentials.
 
--[ ] Voting Poll Component: After a successful login, prompt the user to answer the following question: "What is your favourite coding language?"
-  -[ ] Provide the following options for selection:
+- [ ] Voting Poll Component: After a successful login, prompt the user to answer the following question: "What is your favourite coding language?"
+  - [ ] Provide the following options for selection:
     - PHP
     - C#
     - C
@@ -57,18 +57,18 @@ Password: mysql
     - Python
     - C++
 
-  -[ ] Implement functionality to prevent a user from voting more than once.
+  - [ ] Implement functionality to prevent a user from voting more than once.
 
--[ ] Poll Result Averages:
+- [ ] Poll Result Averages:
 
--[ ] After successful vote submission, display the poll result averages based on all votes already submitted.
+- [ ] After successful vote submission, display the poll result averages based on all votes already submitted.
 
 
 Technical Requirements:
--[x] Use PHP classes in an Object-Oriented Programming (OOP) coding style.
--[ ] Utilize jQuery/AJAX for form submission and validation.
--[x] Host the project locally, with the path to access it being: http://localhost/test/
--[x] Employ a MySQL database with the following details:
+- [x] Use PHP classes in an Object-Oriented Programming (OOP) coding style.
+- [ ] Utilize jQuery/AJAX for form submission and validation.
+- [x] Host the project locally, with the path to access it being: http://localhost/test/
+- [x] Employ a MySQL database with the following details:
   - Database name: test
   - Database login details:
   - Username: root
